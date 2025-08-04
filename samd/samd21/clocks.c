@@ -162,7 +162,7 @@ void clock_init(bool has_rtc_crystal, uint32_t xosc_freq, bool xosc_is_crystal, 
         init_clock_source_dfll48m_usb(dfll48m_fine_calibration);
     }
 
-    enable_clock_generator(0, GCLK_GENCTRL_SRC_DFLL48M_Val, 1);
+    enable_clock_generator(0, GCLK_GENCTRL_SRC_DFLL48M_Val, 6);
     enable_clock_generator(1, GCLK_GENCTRL_SRC_DFLL48M_Val, 1);
     if (has_rtc_crystal) {
         enable_clock_generator(2, GCLK_GENCTRL_SRC_XOSC32K_Val, 1);
